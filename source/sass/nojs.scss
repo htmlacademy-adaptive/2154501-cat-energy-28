@@ -1,0 +1,19 @@
+@import "variable";
+
+@media (max-width: $tablet) {
+  .nojs {
+    margin-bottom: 201px;
+  }
+
+  .nojs__main-header-logo {
+    margin-right: auto;
+  }
+
+  .nojs__button {
+    display: none;
+  }
+
+  .nojs__main-navigation {
+    display: block;
+  }
+}

@@ -1,0 +1,48 @@
+@import "variable";
+
+.location {
+  min-height: 362px;
+  overflow: hidden;
+  background-image: url("../img/map.png");
+  background-position: center;
+  background-size: cover;
+  background-color: $white;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    min-height: 410px;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../img/map-desktop.png");
+    background-position: 33% 50%;
+    background-size: 100%;
+    min-height: 400px;
+  }
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 53px;
+    position: absolute;
+    background-image: url("../img/map-pin-mobile.svg");
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+  }
+
+  @media (min-width: $tablet) {
+    &::before {
+      background-image: url("../img/map-pin-tablet.svg");
+      width: 113px;
+      height: 106px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::before {
+      transform: translate(166%, -65%);
+    }
+  }
+}

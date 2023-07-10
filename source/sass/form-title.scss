@@ -1,0 +1,55 @@
+@import "variable";
+
+.form-title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: $black;
+  margin: 0;
+  margin-bottom: 35px;
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 40px);
+    transform: translate(0, 150%);
+    width: 10000%;
+    height: 2px;
+    background-color: $basic-green;
+  }
+
+  &--small {
+    @media (max-width: 767px) {
+      width: 187px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 69px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 40px);
+      transform: translate(0, 150%);
+      width: 10000%;
+      height: 2px;
+      background-color: $basic-green;
+    }
+  }
+
+  &--comments {
+    @media (min-width: $tablet) {
+      margin-top: 5px;
+      margin-bottom: 72px;
+    }
+  }
+}

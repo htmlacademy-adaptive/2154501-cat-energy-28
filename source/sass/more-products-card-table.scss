@@ -1,0 +1,47 @@
+@import "variable";
+
+.more-products-card-table {
+  font-family: "Lato", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $special-dark-grey;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.more-products-card-table__info-name {
+  font-family: "Lato", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $special-dark-grey;
+
+  @media (min-width: $tablet) {
+    text-align: end;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.more-products-card-table__info-price {
+  font-family: "Lato", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $special-dark-grey;
+  text-align: end;
+
+  @media (min-width: $tablet) {
+    width: 94px;
+    padding: 0;
+  }
+}

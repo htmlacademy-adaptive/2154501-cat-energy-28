@@ -4,40 +4,53 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header container nojs">
-      <a class="main-header__logo main-header-logo">
-        <img class="main-header-logo__image" src="img/icons/logo-icon.svg"  alt="За стеклом" width="34" height="38">
+      <a class="main-header__logo main-header-logo nojs__main-header-logo">
+        <svg class="main-header-logo__image" width="34" height="38"><use xlink:href="img/icons.svg#logo-icon"></use></svg>
+        <svg class="main-header-logo__image-tablet" width="174" height="52"><use xlink:href="img/icons.svg#logo-tablet"></use></svg>
+        <svg class="main-header-logo__image-desktop" width="202" height="59"><use xlink:href="img/icons.svg#logo-desktop"></use></svg>
         <span class="visually-hidden">Логотип магазина CAT ENERGY.</span>
       </a>
       <a class="main-header__logo-text main-header__logo-text">
-        <img class="main-header__logo-text-image" src="img/icons/logo-text.svg"  alt="За стеклом" width="101" height="18">
+        <svg class="main-header__logo-text-image" width="101" height="18"><use xlink:href="img/icons.svg#logo-text"></use></svg>
       </a>
-      <nav>
-        <button class="button-menu nojs__button">
-          <span class="visually-hidden">Открыть меню/закрыть меню</span>
-        </button>
-        <div class="main-navigation__wrapper main-navigation__wrapper--close nojs__main-navigation">
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item main-navigation__item--current">
-              <a class="main-navigation__link" href="index.html">главная</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="catalog.html">каталог продукции</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="form.html">подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+
+
+        <nav class="main-navigation">
+          <button class="button-menu nojs__button">
+            <span class="visually-hidden">Открыть меню/закрыть меню</span>
+          </button>
+          <div class="main-navigation__wrapper main-navigation__wrapper--close nojs__main-navigation">
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item main-navigation__item--current">
+                <a class="main-navigation__link" href="index.html">главная</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="catalog.html">каталог продукции</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="form.html">подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
     </header>
     <main class="index-main">
       <section class="hero-block">
         <h1 class="hero-block__title">Функциональное питание для котов</h1>
         <p class="hero-block__intro">Занялся собой? Займись котом!</p>
-        <img src="img/hero-block-image-mobile.png " alt="Оранжевая банка корма 'CAT ENERGY PR' со вкусом курицы(0% natural).">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/hero-block-image-desktop.png 1x, img/hero-block-image-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/hero-block-image-tablet.png 1x, img/hero-block-image-tablet@2x.png 2x">
+          <img class="hero-block__image" src="img/hero-block-image-mobile.png" srcset="img/hero-block-image-mobile@2x.png 2x" width="280" height="270" alt="Оранжевая банка корма 'CAT ENERGY PR' со вкусом курицы(0% natural).">
+        </picture>
         <a class="button" href="form.html">подобрать программу</a>
         <span class="hero-block__background-image"></span>
       </section>
@@ -100,7 +113,10 @@
           <div class="live-example__slider">
             <div class="live-example__slider-wrapper">
               <div class="live-example__cat-before-food">
-                <img class="live-example__cat-before-food-image" src="./img/live-example-before.png" alt="Как кот выглядит до." width="280" height="256">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/live-example-before-tablet.png 1x, img/live-example-before-tablet@2x.png 2x">
+                  <img class="live-example__cat-before-food-image" src="./img/live-example-before.png" srcset="img/live-example-before@2x.png 2x" alt="Как кот выглядит до." width="280" height="256">
+                </picture>
                 <span class="visually-hidden">Как кот выглядит до</span>
               </div>
               <button type="button" class="live-example__slider-curtine">
@@ -109,7 +125,10 @@
                 </span>
               </button>
               <div class="live-example__cat-after-food">
-                <img class="live-example__cat-after-food-image live-example__cat-after-food-image--mirrored" src="./img/live-example-after.png" alt="Как кот выглядит после." width="280" height="256">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/live-example-after-tablet.png 1x, img/live-example-after-tablet@2x.png 2x">
+                  <img class="live-example__cat-after-food-image live-example__cat-after-food-image--mirrored" src="./img/live-example-after.png" srcset="img/live-example-after@2x.png 2x" alt="Как кот выглядит после." width="280" height="256">
+                </picture>
                 <span class="visually-hidden">Как кот выглядит после</span>
               </div>
             </div>
@@ -125,39 +144,40 @@
         </div>
         <div class="location">
           <span class="visually-hidden">Магазин на карте.</span>
+          <!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300295!2d30.320858715879634!3d59.93871916905443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2str!4v1674578441236!5m2!1sru!2str"  height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
         </div>
       </section>
       <div class="footer__icons section section--darker">
         <div class="footer__icons-wrapper container">
           <a class="footer__cat-energy-link" href="#">
-            <svg class="footer__icon-text" width="128" height="24"><use href="img/footer-logo-text.svg"></use></svg>
+            <svg class="footer__icon-text" width="128" height="24"><use href="img/icons.svg#footer-logo-text"></use></svg>
           </a>
           <div class="footer__socials-wrapper">
             <a class="footer__social-link" href="https://vk.com/htmlacademy">
               <svg class="footer__social-icon" width="28" height="22">
-                <use xlink:href="img/logo-vkontakte.svg"></use>
+                <use xlink:href="img/icons.svg#logo-vkontakte"></use>
               </svg>
             </a>
             <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
               <svg class="footer__social-icon" width="28" height="22">
-                <use xlink:href="img/logo-youtube.svg"></use>
+                <use xlink:href="img/icons.svg#logo-youtube"></use>
               </svg>
             </a>
             <a class="footer__social-link" href="tg://resolve?domain=htmlacademy">
               <svg class="footer__social-icon" width="28" height="22">
-                <use xlink:href="img/logo-telegram.svg"></use>
+                <use xlink:href="img/icons.svg#logo-telegram"></use>
               </svg>
             </a>
           </div>
           <div class="footer__academy-logo">
             <a class="footer__academy-logo-link" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="footer__academy-logo-text" width="113" height="19">
-                <use xlink:href="img/logo-academy-text.svg"></use>
+                <use xlink:href="img/icons.svg#logo-academy-text"></use>
               </svg>
             </a>
             <a class="footer__academy-logo-text-link" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="footer__academy-logo-icon" width="27" height="34">
-                <use xlink:href="img/logo-academy-icon.svg"></use>
+                <use xlink:href="img/icons.svg#logo-academy-icon"></use>
               </svg>
             </a>
           </div>
@@ -165,8 +185,5 @@
       </div>
     </footer>
     <script src="./js/script.js"></script>
-
-
-
   </body>
 </html>

@@ -1,0 +1,46 @@
+@import "variable";
+
+.form-main {
+  overflow-x: hidden;
+}
+
+.form-main .section {
+  @media (min-width: $tablet) {
+    width: 630px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    // margin: 0;
+  }
+}
+
+.form-main__title {
+  margin: 27px 0 37px;
+
+  @media (min-width: $tablet) {
+    margin-top: 17px;
+    margin-bottom: 56px;
+    padding-top: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 27px;
+  }
+}
+
+.form-main__text {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

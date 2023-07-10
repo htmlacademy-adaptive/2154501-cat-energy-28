@@ -1,0 +1,118 @@
+@import "variable";
+@import "mixins";
+
+.main-navigation {
+  display: block;
+  // position: absolute;
+  // right: 50%;
+  // top: 100%;
+  // transform: translate(50%);
+  // width: 100%;
+  // z-index: 3;
+
+  @media (min-width: $tablet) {
+    display: block;
+    position: static;
+    width: auto;
+    transform: none;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: transparent;
+  }
+}
+
+.main-navigation__wrapper {
+  @media (max-width: $tablet) {
+    position: absolute;
+    right: 50%;
+    top: 100%;
+    transform: translate(50%);
+    width: 100%;
+    z-index: 3;
+  }
+
+  &--close {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
+
+  &--open {
+    display: block;
+  }
+}
+
+.main-navigation__list {
+  @include reset-list;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    flex-direction: row;
+    align-self: none;
+    gap: 36px;
+  }
+}
+
+.main-navigation__item {
+  // padding: 22px 0 24px;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+
+  @media (min-width: $tablet) {
+    border: none;
+    width: auto;
+
+    &--current {
+      border-bottom: 2px solid $basic-green;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    border-bottom-color: $white;
+  }
+}
+
+.main-navigation__item--desktop.main-navigation__item--current {
+  @media (min-width: $desktop) {
+    border-bottom-color: $basic-green;
+  }
+}
+
+.main-navigation__link {
+  padding: 22px 0 24px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 8px 0;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $white;
+  }
+
+  @media (min-width: $desktop) {
+    &--desktop {
+      color: #111111;
+    }
+  }
+}
