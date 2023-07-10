@@ -1,0 +1,21 @@
+.button-menu {
+  background-image: url("../img/open-mobile-menu.svg");
+  width: 24px;
+  height: 18px;
+  display: block;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+
+  &--open-menu {
+    background-image: url("../img/close-mobile-menu.svg");
+    width: 24px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

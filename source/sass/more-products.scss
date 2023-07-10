@@ -1,0 +1,52 @@
+@import "variable";
+@import "mixins";
+
+.more-products {
+  padding: 35px 0 0;
+
+  @media (min-width: $tablet) {
+    padding-top: 63px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 80px;
+  }
+}
+
+.more-products__title {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 38px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+    margin-bottom: 81px;
+  }
+}
+
+.more-products__list {
+  @include reset-list;
+}
+
+.more-products__item {
+  padding: 13px 0 19px;
+
+  @media (min-width: $tablet) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 14px 0 17px;
+  }
+}

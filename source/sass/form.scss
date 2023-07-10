@@ -1,0 +1,17 @@
+@import "variable";
+
+.form {
+  padding: 0 0 32px;
+
+  @media (min-width: $tablet) {
+    padding: 0 0 72px;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    padding: 66px 0 0;
+  }
+}

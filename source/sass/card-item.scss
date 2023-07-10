@@ -1,0 +1,131 @@
+@import "variable";
+
+.card-item {
+  padding: 19px 0 0;
+  min-height: 190px;
+  border-top: 1px solid #ebebeb;
+
+  &:last-child {
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  @media (min-width: $tablet) {
+    background-color: $basic-grey;
+    padding: 0 38px 39px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 162px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+}
+
+.card-item__info-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  // justify-content: space-between;
+  align-items: center;
+  padding-bottom: 9px;
+  margin-bottom: 4px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 24px;
+  }
+}
+
+.card-item__title {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $card-item-title;
+  margin-bottom: 14px;
+  max-width: 76px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 155px;
+    text-align: center;
+    margin: 0 auto 21px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 165px;
+    margin-bottom: 8px;
+    line-height: 21px;
+  }
+}
+
+.card-item__image {
+  margin: auto;
+  display: block;
+
+  &--small {
+    margin-right: 36px;
+  }
+
+  &--big {
+    margin-right: 28px;
+  }
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 215px;
+
+    &--small {
+      width: 161px;
+      height: 172px;
+      margin-right: 0;
+    }
+
+    &--big {
+      width: 168px;
+      height: 206px;
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 206px;
+
+    &--small {
+      width: 161px;
+      height: 172px;
+    }
+
+    &--big {
+      width: 172px;
+      height: 196px;
+    }
+  }
+}
+
+.card-item__button {
+  display: block;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 11px 26px;
+
+  @media (min-width: $desktop) {
+    padding: 10px 53px;
+  }
+}
